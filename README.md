@@ -1,5 +1,6 @@
 # sparkie
-Sparkie is a collection of tools to help users and developers experience Spark
+Sparkie is a collection of tools to help users and developers experience Spark. 
+Built by Phoenix Labs with data from BlockAnalitica.
 
 ## Installation Instructions
 Prerequisite:
@@ -21,5 +22,5 @@ poetry shell
 
 3. run streamlit
 ```sh
-streamlit run 0_⚡️_Welcome_to_Sparkie.py
+streamlit run 0_Welcome_to_Sparkie.py
 ```
