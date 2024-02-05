@@ -32,4 +32,4 @@ EXPOSE 8501
 ENV STREAMLIT_SERVER_PORT 8501
 
 # Run streamlit when the container launches
-CMD ["streamlit", "run", "0_Welcome_to_Sparkie"]
+CMD ["streamlit", "run", "0_Welcome_to_Sparkie.py"]
