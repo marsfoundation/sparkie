@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from wallet_connect import wallet_connect
 
 # TODO:
 # - [ ] create cron job for data refresh
@@ -92,7 +91,7 @@ def main():
     with col3:
         uploaded_sdai = st.file_uploader('Upload your sDAI transactions', type=['csv'])
         st.caption('Upload a CSV file with 2 columns, date (yyyy-mm-dd) and amount (DAI amount w/ decimal point, negative when exiting sDAI).')
-        with open('example_sdai.csv') as f:
+        with open('data/example_sdai.csv') as f:
             st.download_button('Download sample sDAI transactions', f, file_name='sample_sdai.csv', mime='text/csv')
     with col4:
         st.write('') # space
@@ -100,8 +99,6 @@ def main():
         st.write('') # space
         st.title('  or')
     with col6:
-        connect_button = wallet_connect(label="wallet",key="wallet")
-        st.write('or') # space
         input_wallet = st.text_input('Enter your wallet address', value=None)
 
     st.write('') # space
@@ -125,11 +122,8 @@ def main():
             st.warning('there was an error, please try to uploading a valid csv file')
             success = False
 
-    if len(connect_button) > 5 or input_wallet is not None:
-        if len(connect_button) > 5:
-            wallet_address = str(connect_button).strip().lower()
-        else:
-            wallet_address = str(input_wallet).strip().lower()
+    if input_wallet is not None:
+        wallet_address = str(input_wallet).strip().lower()
 
         try:
             df_transactions = get_sdai_wallets()
