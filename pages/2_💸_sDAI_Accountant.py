@@ -82,7 +82,7 @@ def main():
         st.caption('A simple calculator to know the effective yield of your sDAI.')
 
     with col2:
-        st.caption('data updated on 19th Dec 2023')
+        st.caption('data updated on 9th Feb 2024')
 
     st.write('') # space
     success = False # control flow for the bulk of calculations

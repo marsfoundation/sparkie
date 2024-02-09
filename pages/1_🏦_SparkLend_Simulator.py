@@ -145,7 +145,7 @@ def home():
     with col01:
         st.caption('A simple calculator to know liquidation price and maximum borrowable amount for your position.')
     with col02:
-        st.caption('data updated on 25th Jan 2024')
+        st.caption('data updated on 9th Feb 2024')
 
     st.write("") # space
 
