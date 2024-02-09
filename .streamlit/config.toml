@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor="#FFA900"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
